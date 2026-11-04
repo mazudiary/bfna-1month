@@ -234,6 +234,7 @@
         <div class="film-card">
           <div class="video-container">
             <video id="anniversary-video" controls playsinline webkit-playsinline preload="metadata"
+            <video id="anniversary-video" src="public/videos/anniversary.mp4" controls playsinline webkit-playsinline x5-playsinline preload="metadata"
               poster="public/images/wedding/video-poster.webp">
               <source src="public/videos/anniversary.mp4" type="video/mp4">
               <source src="public/videos/anniversary.webm" type="video/webm">
@@ -250,6 +251,11 @@
               <p style="font-size: 0.9rem; opacity: 0.85; max-width: 480px;">Tap anywhere to begin playing our special
                 video memories</p>
             </div>
+            <!-- Dynamic Mobile Unmute Button (Shown only if browser audio policy requires muted start) -->
+            <button id="video-unmute-btn" class="video-unmute-btn" aria-label="Unmute video sound" style="display: none;">
+              <span aria-hidden="true">🔊</span>
+              <span>Tap for Sound</span>
+            </button>
           </div>
         </div>
       </div>
