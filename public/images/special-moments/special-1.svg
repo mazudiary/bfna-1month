@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="romanticGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5f5" />
+      <stop offset="40%" stop-color="#fae8e9" />
+      <stop offset="100%" stop-color="#f5d6da" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37" />
+      <stop offset="50%" stop-color="#f3e5ab" />
+      <stop offset="100%" stop-color="#c59b27" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#a37078" flood-opacity="0.15" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#romanticGrad)"/>
+  <rect x="15" y="15" width="770" height="570" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="6,4" rx="12" opacity="0.6"/>
+  <circle cx="400" cy="260" r="45" fill="#fff" filter="url(#shadow)" opacity="0.9"/>
+  <!-- Butterfly Icon -->
+  <path d="M 400 260 C 375 235, 355 255, 375 275 C 360 285, 370 295, 400 265 C 430 295, 440 285, 425 275 C 445 255, 425 235, 400 260 Z" fill="#d4af37" opacity="0.8"/>
+  <circle cx="400" cy="260" r="3" fill="#6d4c41"/>
+  <text x="50%" y="335" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="600" fill="#4a3739">More Than Memories</text>
+  <text x="50%" y="360" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="12" letter-spacing="1.5" fill="#8c6d73">AN UNBREAKABLE BOND</text>
+  <text x="50%" y="385" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="10" fill="#a08086" font-style="italic">Replace with your real photograph</text>
+</svg>
