@@ -27,12 +27,16 @@ const STORY_DATA = {
         // Uses royalty-free soothing romantic piano ambient track by default
         audioSource: "https://cdn.pixabay.com/download/audio/2022/05/16/audio_c1c1f5127e.mp3?filename=piano-moment-9835.mp3",
         // Local path fallback: "public/audio/romantic-instrumental.mp3"
+        // High quality romantic instrumental audio generated for the anniversary
+        audioSource: "public/audio/romantic-instrumental.mp3",
         localAudioSource: "public/audio/romantic-instrumental.mp3",
         
         // Drop your Google Flow anniversary film here (e.g. 'public/videos/anniversary.mp4')
+        // Mobile-optimized progressive streaming anniversary video
         videoSource: "public/videos/anniversary.mp4",
         videoSourceWebm: "public/videos/anniversary.webm",
         videoPoster: "public/images/wedding/wedding-cover.webp"
+        videoPoster: "public/images/wedding/video-poster.webp"
     },
 
     // Timeline Events (Section 2)
