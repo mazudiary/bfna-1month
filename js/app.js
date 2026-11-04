@@ -396,10 +396,12 @@ function initLetterEnvelope() {
 
 /* ==========================================================================
    7. Anniversary Video Player
+   7. Anniversary Video Player (Universal Mobile & Desktop Support)
    ========================================================================== */
 function initFilmPlayer() {
     const overlay = document.getElementById('video-overlay');
     const video = document.getElementById('anniversary-video');
+    const unmuteBtn = document.getElementById('video-unmute-btn');
     const bgAudio = document.getElementById('bg-music');
     const musicWave = document.getElementById('music-wave');
     const musicText = document.getElementById('music-text');
@@ -416,10 +418,113 @@ function initFilmPlayer() {
     video.addEventListener('play', () => {
         if (overlay) overlay.style.display = 'none';
         // Seamlessly pause background instrumental music so video sound is clear
+    const pauseBgMusic = () => {
         if (bgAudio && !bgAudio.paused) {
             bgAudio.pause();
             if (musicWave) musicWave.classList.add('paused');
             if (musicText) musicText.textContent = "Play Music";
+        }
+    };
+
+    const hideOverlay = () => {
+        if (overlay) overlay.classList.add('hidden');
+    };
+
+    const showOverlay = () => {
+        if (overlay) overlay.classList.remove('hidden');
+    };
+
+    const showUnmutePrompt = () => {
+        if (unmuteBtn) {
+            unmuteBtn.style.display = 'flex';
+        }
+    };
+
+    const hideUnmutePrompt = () => {
+        if (unmuteBtn) {
+            unmuteBtn.style.display = 'none';
+        }
+    };
+
+    // Unmute action handler
+    if (unmuteBtn) {
+        unmuteBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            video.muted = false;
+            video.volume = 1.0;
+            hideUnmutePrompt();
+        });
+    }
+
+    // Play request orchestrator with mobile Chrome autoplay fallback
+    let isStarting = false;
+    const requestPlay = (e) => {
+        if (e && e.type === 'touchend') {
+            e.preventDefault(); // Prevent ghost click
+        }
+        if (isStarting) return;
+        isStarting = true;
+
+        pauseBgMusic();
+
+        // Make sure sources are loaded
+        if (video.readyState === 0 && typeof video.load === 'function') {
+            video.load();
+        }
+
+        // Try unmuted playback first
+        const promise = video.play();
+        if (promise !== undefined) {
+            promise.then(() => {
+                hideOverlay();
+                hideUnmutePrompt();
+                isStarting = false;
+            }).catch(err => {
+                console.warn('Direct unmuted play blocked on mobile, falling back to muted start:', err);
+                // Chrome Mobile strict policy fallback: start muted, then offer instant unmute
+                video.muted = true;
+                video.play().then(() => {
+                    hideOverlay();
+                    showUnmutePrompt();
+                    isStarting = false;
+                }).catch(fatalErr => {
+                    console.error('Video play error:', fatalErr);
+                    // Expose native video controls directly so user can tap them
+                    hideOverlay();
+                    isStarting = false;
+                });
+            });
+        } else {
+            hideOverlay();
+            isStarting = false;
+        }
+    };
+
+    if (overlay) {
+        overlay.addEventListener('click', requestPlay);
+        overlay.addEventListener('touchend', requestPlay, { passive: false });
+    }
+
+    // Native playback event listeners
+    video.addEventListener('play', () => {
+        hideOverlay();
+        pauseBgMusic();
+        if (!video.muted) {
+            hideUnmutePrompt();
+        }
+    });
+
+    video.addEventListener('volumechange', () => {
+        if (!video.muted && video.volume > 0) {
+            hideUnmutePrompt();
+        }
+    });
+
+    video.addEventListener('pause', () => {
+        // If paused at the end, return overlay so user can re-watch
+        if (video.ended) {
+            showOverlay();
+            hideUnmutePrompt();
         }
     });
 }
@@ -671,6 +776,8 @@ function initTouchSparks() {
     function handlePointer(e) {
         // Avoid interfering with button or link clicks
         if (e.target.closest('button, a, input, select, video, .lightbox-modal')) return;
+        // Avoid interfering with buttons, links, video player, or overlays
+        if (e.target.closest('button, a, input, select, video, .lightbox-modal, #video-overlay, .video-container, .video-unmute-btn')) return;
 
         const now = Date.now();
         if (now - lastTime < 160) return; // Smooth throttle
