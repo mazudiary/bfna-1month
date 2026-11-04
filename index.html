@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Butterfly Never Fly Along — Happy 1st Month Anniversary, Premiii ❤️</title>
+  <meta name="description"
+    content="A private romantic first-month marriage anniversary love story from friendship to forever. Celebrating Basharul & Lopa. Butterfly Never Fly Along.">
+  <meta name="theme-color" content="#fcf9f5">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Butterfly Never Fly Along — Happy 1st Month Anniversary">
+  <meta property="og:description" content="From friendship to forever. Celebrating our first month of marriage.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts: Playfair Display (Serif), Great Vibes (Handwritten/Script), Montserrat (Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+  <!-- Floating Ambient Particles Canvas (Ultra-lightweight butterflies & petals) -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Floating Controls: Music Toggle -->
+  <header class="top-nav">
+    <button id="music-toggle-btn" class="music-toggle-btn" aria-label="Play romantic background music">
+      <div id="music-wave" class="music-wave paused" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span id="music-text">Play Music</span>
+      <span aria-hidden="true">🎵</span>
+    </button>
+  </header>
+
+  <!-- Hidden Audio Element for Instrumental Music -->
+  <audio id="bg-music" preload="none" loop></audio>
+
+  <!-- ======================================================================
+       SECTION 1: HERO / WELCOME
+       ====================================================================== -->
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <!-- Elegant SVG Butterfly Icon Animation -->
+        <div class="hero-butterfly-anim" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="100%" height="100%">
+            <defs>
+              <linearGradient id="goldH" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#dfba45" />
+                <stop offset="50%" stop-color="#ecd58b" />
+                <stop offset="100%" stop-color="#c59b27" />
+              </linearGradient>
+            </defs>
+            <path d="M 50 50 C 25 15, 0 35, 25 60 C 5 70, 15 85, 45 60 C 75 85, 85 70, 65 60 C 90 35, 65 15, 50 50 Z"
+              fill="url(#goldH)" opacity="0.9" />
+            <circle cx="50" cy="50" r="4" fill="#6d4c41" />
+          </svg>
+        </div>
+
+        <p class="hero-salutation">Hey, My Premiii...</p>
+        <h1 class="hero-title">Happy First Month Anniversary,<br><span class="gold-gradient-text">My Butterfly</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          From friendship to forever. Our story is my favorite story.
+        </p>
+
+        <div class="hero-badge">
+          <span class="date-text">14 February 2020</span>
+          <span class="hero-badge-separator" aria-hidden="true">✦</span>
+          <span class="date-text">Forever &amp; Beyond</span>
+        </div>
+
+        <div>
+          <a href="#anniversary-spotlight" class="hero-cta" id="start-story-btn">
+            Open Our Story ❤️
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 1.5: 1ST MONTH ANNIVERSARY SPOTLIGHT
+         ====================================================================== -->
+    <section id="anniversary-spotlight" class="section-padding anniversary-spotlight-section">
+      <div class="container text-center">
+        <span class="section-label">One Month Milestone</span>
+        <h2 class="section-title">30 Days as Husband &amp; Wife ❤️</h2>
+        <p class="section-subtitle">
+          From best friends who talked for hours to soulmates walking toward eternity together.
+        </p>
+
+        <div class="anniversary-hero-card" id="anniversary-hero-card">
+          <div class="anniversary-photo-frame">
+            <div class="anniversary-glow" aria-hidden="true"></div>
+            <img src="public/images/anniversary/1.webp" alt="Happy 1st Month Anniversary, Premiii"
+              class="anniversary-photo" loading="eager"
+              onerror="this.onerror=null; this.src='public/images/wedding/1.webp';">
+            <div class="anniversary-badge-overlay">
+              <span class="anniversary-badge-icon" aria-hidden="true">✨</span>
+              <span>1 Month of Marriage · 14 Feb 2020 to Eternity</span>
+            </div>
+          </div>
+
+          <div class="anniversary-content">
+            <div class="anniversary-quote">
+              “In you, I found my best friend, my safest home, and the love I pray to keep in this life and reunited in
+              Jannatul Ferdous.”
+            </div>
+
+            <div class="milestone-stats-grid">
+              <div class="stat-card">
+                <div class="stat-number gold-gradient-text" data-count="30">30</div>
+                <div class="stat-label">Days of Pure Bliss</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number gold-gradient-text" data-count="720">720</div>
+                <div class="stat-label">Hours of Shared Smiles</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number gold-gradient-text" data-count="43200">43,200</div>
+                <div class="stat-label">Minutes of Care</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number gold-gradient-text">∞</div>
+                <div class="stat-label">Lifetime of Love</div>
+              </div>
+            </div>
+
+            <div class="love-shower-wrap">
+              <button id="love-burst-btn" class="love-burst-btn" aria-label="Shower Love On Premiii">
+                <span>Shower Love on My Butterfly</span>
+                <span class="heart-pulse" aria-hidden="true">💖</span>
+              </button>
+              <div id="love-counter-text" class="love-counter-text">Tapped <span id="love-count">0</span> times with
+                pure love</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: OUR JOURNEY (TIMELINE)
+         ====================================================================== -->
+    <section id="journey" class="section-padding">
+      <div class="container text-center" style="text-align: center;">
+        <span class="section-label">Our Journey</span>
+        <h2 class="section-title">From Friendship to Forever</h2>
+        <p class="section-subtitle">
+          Every moment since 14 February 2020 was a stepping stone toward our greatest blessing.
+        </p>
+
+        <!-- Dynamic Timeline Populated via config.js -->
+        <div class="timeline-wrap" id="timeline-container">
+          <!-- Timeline items injected here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: OUR MEMORY GALLERY
+         ====================================================================== -->
+    <section id="gallery" class="section-padding" style="background: rgba(255,255,255,0.4);">
+      <div class="container text-center" style="text-align: center;">
+        <span class="section-label">Moments We Treasure</span>
+        <h2 class="section-title">Our Memory Gallery</h2>
+        <p class="section-subtitle">
+          A timeless collection of every smile, every shared secret, and the love that carried us here.
+        </p>
+
+        <!-- Category Filters -->
+        <div class="gallery-filters" id="gallery-filters" role="tablist" aria-label="Gallery filter categories">
+          <!-- Filter buttons injected here -->
+        </div>
+
+        <!-- Masonry / Responsive Grid -->
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Gallery photos injected here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: OUR WEDDING
+         ====================================================================== -->
+    <section id="wedding" class="section-padding wedding-section">
+      <div class="container">
+        <div class="wedding-quote-card">
+          <span class="section-label">The Sacred Beginning</span>
+          <h2 class="section-title">THE DAY OUR FOREVER BEGAN</h2>
+          <p class="wedding-quote-text">
+            “From being friends to becoming life partners, I would choose this journey with you again and again.”
+          </p>
+          <p style="color: var(--color-rose-muted); font-size: 0.95rem; font-weight: 500;">
+            A covenant of love, sealed with prayers for this world and Jannatul Ferdous.
+          </p>
+        </div>
+
+        <div class="wedding-showcase-grid">
+          <div class="wedding-hero-frame">
+            <img src="public/images/wedding/1.webp" alt="The day our forever began" loading="lazy">
+          </div>
+          <div class="wedding-sub-frames" id="wedding-sub-frames">
+            <!-- Sub frames injected here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: OUR ANNIVERSARY FILM
+         ====================================================================== -->
+    <section id="film" class="section-padding">
+      <div class="container text-center" style="text-align: center;">
+        <span class="section-label">Cinematic Memories</span>
+        <h2 class="section-title">Our Story, Our Memories, Our Forever</h2>
+        <p class="section-subtitle">
+          A special anniversary film dedicated to the one who makes my heart feel safe.
+        </p>
+
+        <div class="film-card">
+          <div class="video-container">
+            <video id="anniversary-video" controls playsinline webkit-playsinline preload="metadata"
+              poster="public/images/wedding/video-poster.webp">
+              <source src="public/videos/anniversary.mp4" type="video/mp4">
+              <source src="public/videos/anniversary.webm" type="video/webm">
+              Your browser does not support HTML5 video playback.
+            </video>
+            <!-- Custom Play Overlay -->
+            <div id="video-overlay" class="video-placeholder-overlay" role="button" tabindex="0"
+              aria-label="Play Anniversary Video">
+              <div class="play-film-btn">
+                <div class="play-icon" aria-hidden="true"></div>
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.5rem; color: #fbf3e6;">
+                Watch Our Anniversary Film</h3>
+              <p style="font-size: 0.9rem; opacity: 0.85; max-width: 480px;">Tap anywhere to begin playing our special
+                video memories</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: A LETTER FOR MY BUTTERFLY
+         ====================================================================== -->
+    <section id="letter" class="section-padding" style="background: rgba(250, 225, 230, 0.35);">
+      <div class="container text-center" style="text-align: center;">
+        <span class="section-label">From the Depths of My Heart</span>
+        <h2 class="section-title">A Letter for My Butterfly</h2>
+        <p class="section-subtitle">
+          Words that no ordinary message can hold. Click the seal below to open.
+        </p>
+
+        <div class="envelope-wrapper">
+          <!-- Interactive Wax Seal Envelope -->
+          <div class="envelope-box" id="envelope-box">
+            <div class="wax-seal" id="envelope-trigger" role="button" tabindex="0" aria-label="Open letter seal">
+              <span>❤️</span>
+            </div>
+            <h3 class="envelope-title">A Little Letter for My Premiii</h3>
+            <p class="envelope-sub">Sealed with eternal love &amp; respect</p>
+            <div class="envelope-click-hint">
+              <span>Click to open and read</span>
+              <span aria-hidden="true">💌</span>
+            </div>
+          </div>
+
+          <!-- Revealed Letter Paper -->
+          <article class="letter-paper" id="letter-paper">
+            <div class="letter-salutation" id="letter-salutation">My dearest Premiii,</div>
+            <div class="letter-body" id="letter-body">
+              <!-- Paragraphs populated from config.js -->
+            </div>
+            <div class="letter-signature-block">
+              <div class="letter-signature" id="letter-signature">With all my love,</div>
+              <div class="letter-sender" id="letter-sender">Your forever friend and husband. ❤️</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: OUR FOREVER PROMISE
+         ====================================================================== -->
+    <section id="promise" class="section-padding">
+      <div class="container">
+        <div class="promise-section">
+          <span class="section-label">Eternal Companionship</span>
+          <h2 class="promise-slogan gold-gradient-text">BUTTERFLY NEVER FLY ALONG</h2>
+
+          <p class="promise-quote">
+            “Two hearts. One journey. One lifetime.”
+          </p>
+
+          <p style="font-size: 1.1rem; color: var(--color-text-secondary); margin-bottom: 1.25rem;">
+            From 14 February 2020 to forever.
+          </p>
+
+          <div class="promise-pillars">
+            <div class="promise-pill">
+              <div class="promise-pill-icon" aria-hidden="true">🌱</div>
+              <div class="promise-pill-text">Rooted in Pure Friendship</div>
+            </div>
+            <div class="promise-pill">
+              <div class="promise-pill-icon" aria-hidden="true">🤲</div>
+              <div class="promise-pill-text">Reunited in Jannatul Ferdous</div>
+            </div>
+            <div class="promise-pill">
+              <div class="promise-pill-icon" aria-hidden="true">💍</div>
+              <div class="promise-pill-text">I Will Keep Choosing You Every Day</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 8: FINAL SURPRISE & CINEMATIC ENDING
+         ====================================================================== -->
+    <section id="final-surprise" class="final-section">
+      <div class="final-card">
+        <div class="final-butterflies-duo" aria-hidden="true">
+          <svg class="butterfly-fly-1" viewBox="0 0 100 100">
+            <path d="M 50 50 C 25 15, 0 35, 25 60 C 5 70, 15 85, 45 60 C 75 85, 85 70, 65 60 C 90 35, 65 15, 50 50 Z"
+              fill="#dfba45" />
+          </svg>
+          <svg class="butterfly-fly-2" viewBox="0 0 100 100">
+            <path d="M 50 50 C 25 15, 0 35, 25 60 C 5 70, 15 85, 45 60 C 75 85, 85 70, 65 60 C 90 35, 65 15, 50 50 Z"
+              fill="#f0c3cc" />
+          </svg>
+        </div>
+
+        <h2 class="final-title">Happy 1st Month Anniversary, Premiii ❤️</h2>
+        <div class="final-epithets">My Pakhii. My Butterfly. My Best Friend. My Forever.</div>
+        <p class="final-slogan-large">Butterfly Never Fly Along</p>
+
+        <button class="replay-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+          ↺ Revisit Our Story From Beginning
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       LIGHTBOX MODAL (Mobile-first Fullscreen photo viewer)
+       ====================================================================== -->
+  <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo Viewer">
+    <button id="lightbox-close" class="lightbox-close-btn" aria-label="Close photo viewer">&times;</button>
+    <button id="lightbox-prev" class="lightbox-nav-btn lightbox-prev" aria-label="Previous photo">&#10094;</button>
+    <button id="lightbox-next" class="lightbox-nav-btn lightbox-next" aria-label="Next photo">&#10095;</button>
+
+    <div class="lightbox-content">
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Full view">
+      <div class="lightbox-caption-box">
+        <h4 id="lightbox-title" class="lightbox-caption-title"></h4>
+        <p id="lightbox-caption" class="lightbox-caption-text"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Mobile Navigation Dock (UX Max Thumb Navigation) -->
+  <nav id="mobile-dock" class="mobile-dock" aria-label="Quick Mobile Navigation">
+    <a href="#hero" class="dock-item active" data-section="hero">
+      <span class="dock-icon">🌸</span>
+      <span class="dock-text">Home</span>
+    </a>
+    <a href="#anniversary-spotlight" class="dock-item" data-section="anniversary-spotlight">
+      <span class="dock-icon">💍</span>
+      <span class="dock-text">1 Month</span>
+    </a>
+    <a href="#journey" class="dock-item" data-section="journey">
+      <span class="dock-icon">⏳</span>
+      <span class="dock-text">Journey</span>
+    </a>
+    <a href="#gallery" class="dock-item" data-section="gallery">
+      <span class="dock-icon">📸</span>
+      <span class="dock-text">Gallery</span>
+    </a>
+    <a href="#film" class="dock-item" data-section="film">
+      <span class="dock-icon">🎬</span>
+      <span class="dock-text">Film</span>
+    </a>
+    <a href="#letter" class="dock-item" data-section="letter">
+      <span class="dock-icon">💌</span>
+      <span class="dock-text">Letter</span>
+    </a>
+  </nav>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Scripts: Framer Motion Engine First, then Config and App Logic -->
+  <script src="js/motion.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
